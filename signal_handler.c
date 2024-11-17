@@ -4,9 +4,10 @@
  */
 
 /**
- * Modified by:
+ * Modified by: Braydon H.
  * 
- * Brief summary of modifications:
+ * Brief summary of modifications: Commented exit(1) for experimental purposes to try 
+ * and send a signal to kill the program
  */
 
 
@@ -19,8 +20,8 @@
  * @brief Signal handler for SIGINT - prints a message and exits
  */
 void handle_signal() {
-    printf("Received a signal\n");
-    exit(1);
+    printf("\nReceived a signal\n");
+    //exit(1);
 }
 
 int main() {
@@ -30,7 +31,7 @@ int main() {
 
     // Wait until a signal is received
     while(1) {
-        printf("Sleeping\n");
+        printf("Waiting on a signal\n");
         sleep(1);
     }
 
